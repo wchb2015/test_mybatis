@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper       PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- namespace命名空间，作用就是对sql进行分类化管理，理解sql隔离
-注意：使用mapper代理方法开发，namespace有特殊重要的作用
--->
+<!-- namespace命名空间，作用就是对sql进行分类化管理，理解sql隔离注意：使用mapper代理方法开发，namespace有特殊重要的作用-->
 <mapper namespace="test">
 
     <!-- 在 映射文件中配置很多sql语句 -->
@@ -27,7 +25,7 @@
     ${value}：接收输入 参数的内容，如果传入类型是简单类型，${}中只能使用value
      -->
     <select id="findUserByName" parameterType="java.lang.String" resultType="com.lvmama.model.AttDetail">
-        SELECT * FROM USER WHERE username LIKE '%${value}%'
+        SELECT * FROM user WHERE username LIKE '%${value}%'
     </select>
 
     <!-- 添加用户
@@ -76,7 +74,7 @@
     parameterType指定user对象，包括 id和更新信息，注意：id必须存在
     #{id}：从输入 user对象中获取id属性值
      -->
-    <update id="updateUser" parameterType="com.lvmama.model.AttDetail">
+    <update id="updateUser" parameterType="com.lvmama.model.User">
         update user set username=#{username},birthday=#{birthday},sex=#{sex},address=#{address}
         where id=#{id}
     </update>

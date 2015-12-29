@@ -4,6 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+
+    <!-- The Basics -->
     <groupId>test</groupId>
     <artifactId>mybatis</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -82,18 +84,14 @@
 
     </profiles>
 
+    <!-- Build Settings -->
+    <!--http://maven.apache.org/pom.html#Build_Settings-->
     <build>
         <finalName>${artifactId}-${version}</finalName>
         <resources>
             <resource>
                 <!--directory: 资源所在的位置-->
                 <directory>src/main/resources</directory>
-                <includes>
-                    <!--includes: 样式，包括那些资源 excludes: 排除的资源-->
-                    <include>
-                        *.properties
-                    </include>
-                </includes>
                 <!--filtering: 是否替换资源中的属性placehold-->
                 <filtering>true</filtering>
             </resource>

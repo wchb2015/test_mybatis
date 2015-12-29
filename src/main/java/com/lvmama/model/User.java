@@ -9,10 +9,10 @@ public class User {
 
     //属性名和数据库表的字段对应
     private int id;
-    private String username;// 用户姓名
-    private String sex;// 性别
-    private Date birthday;// 生日
-    private String address;// 地址
+    private String username;
+    private String sex;
+    private Date birthday;
+    private String address;
 
     public int getId() {
         return id;
