@@ -7,6 +7,7 @@
     <groupId>test</groupId>
     <artifactId>mybatis</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>test_mybatis</name>
 
     <dependencies>
         <!--common start-->
@@ -51,10 +52,51 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
+        </dependency>
         <!--common end-->
 
-
-
-
+        <!--mybatis start-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <!--mybatis end-->
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+
+            </properties>
+        </profile>
+
+    </profiles>
+
+    <build>
+        <finalName>${artifactId}-${version}</finalName>
+        <resources>
+            <resource>
+                <!--directory: 资源所在的位置-->
+                <directory>src/main/resources</directory>
+                <includes>
+                    <!--includes: 样式，包括那些资源 excludes: 排除的资源-->
+                    <include>
+                        *.properties
+                    </include>
+                </includes>
+                <!--filtering: 是否替换资源中的属性placehold-->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>
