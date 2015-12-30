@@ -41,7 +41,7 @@ public class UserDaoImplTest {
     @Test
     public void testFindUserById() throws Exception {
 
-        User user = userDao.findUserById(10);
+        User user = userDao.findUserById(16);
 
         LOG.info(user);
     }

@@ -4,11 +4,15 @@ package Thread; /**
 // http://www.iteye.com/topic/806990
 // http://www.iteye.com/topic/808550
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 /**
  * 测试多线程
  */
 public class Account {
 
+    public final Log LOG = LogFactory.getLog(this.getClass());
     private int balance;
 
     public Account(int balance) {
@@ -33,12 +37,12 @@ public class Account {
         Thread b = new Thread(new WithdrawThread(account, 20), "withdraw");
         a.start();
         b.start();
-        a.join();
+        a.join();//join() 方法主要是让调用该方法的thread完成run方法里面的东西后， 再执行join()方法后面的代码。
         b.join();
         System.out.println(account.getBalance());
     }
 
-    static class AddThread implements Runnable {
+    static   class  AddThread implements Runnable {
         Account account;
         int amount;
 
