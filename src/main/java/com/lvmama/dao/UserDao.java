@@ -9,14 +9,14 @@ import java.util.List;
  */
 public interface UserDao {
 
-    User findUserById(int id) throws Exception;
+    User findUserById(int id);
 
-    List<User> findUserByName(String name) throws Exception;
+    List<User> findUserByName(String name);
 
-    int insertUser(User user) throws Exception;
+    int insertUser(User user);
 
-    int deleteUser(int id) throws Exception;
+    int deleteUser(int id);
 
-    int updateUser(User user) throws Exception;
+    int updateUser(User user);
 
 }

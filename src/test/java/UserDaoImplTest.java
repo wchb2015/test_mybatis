@@ -27,7 +27,7 @@ public class UserDaoImplTest {
     @Before
     public void setUp() throws Exception {
 
-        String resource = "SqlMapConfig.xml";
+        String resource = "mybatis-config.xml";
 
         InputStream inputStream = Resources.getResourceAsStream(resource);
 
@@ -59,9 +59,10 @@ public class UserDaoImplTest {
     public void testInsertUser() throws Exception {
 
         User user = new User();
-        user.setAddress("上海普陀区");
+        user.setAddress("LA");
         user.setBirthday(new Date());
         user.setUsername("Tom1");
+        user.setSex("M");
 
         LOG.info("result----" + userDao.insertUser(user));
 
@@ -70,7 +71,7 @@ public class UserDaoImplTest {
     @Test
     public void testDeleteUser() throws Exception {
 
-        LOG.info("result----" + userDao.deleteUser(100));
+        LOG.info("result----" + userDao.deleteUser(29));
 
     }
 
@@ -78,10 +79,11 @@ public class UserDaoImplTest {
     public void testUpdateUser() throws Exception {
 
         User user = new User();
-        user.setAddress("上海普陀区");
+        user.setAddress("LA");
         user.setBirthday(new Date());
-        user.setUsername("Tom1");
-        user.setId(16);
+        user.setUsername("Frank");
+        user.setSex("M");
+        user.setId(42);
 
         LOG.info("result----" + userDao.updateUser(user));
 
