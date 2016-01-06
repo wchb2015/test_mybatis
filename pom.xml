@@ -69,6 +69,12 @@
             <version>3.3.0</version>
         </dependency>
         <!--mybatis end-->
+
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.12</version>
+        </dependency>
     </dependencies>
 
     <profiles>

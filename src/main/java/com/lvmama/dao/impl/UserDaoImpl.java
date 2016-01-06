@@ -19,7 +19,7 @@ public class UserDaoImpl implements UserDao {
     }
 
 
-    public int insertUser(User user) throws Exception {
+    public int insertUser(User user) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         int result = sqlSession.insert("test.insertUser", user);
@@ -32,7 +32,7 @@ public class UserDaoImpl implements UserDao {
 
     }
 
-    public int deleteUser(int id) throws Exception {
+    public int deleteUser(int id) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         int result = sqlSession.delete("test.deleteUser", id);
@@ -45,7 +45,7 @@ public class UserDaoImpl implements UserDao {
 
     }
 
-    public int updateUser(User user) throws Exception {
+    public int updateUser(User user) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         int result = sqlSession.update("test.updateUser", user);
@@ -57,7 +57,7 @@ public class UserDaoImpl implements UserDao {
         return result;
     }
 
-    public User findUserById(int id) throws Exception {
+    public User findUserById(int id) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         User user = sqlSession.selectOne("test.findUserById", id);
@@ -68,7 +68,7 @@ public class UserDaoImpl implements UserDao {
 
     }
 
-    public List<User> findUserByName(String name) throws Exception {
+    public List<User> findUserByName(String name) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         List<User> list = sqlSession.selectList("test.findUserByName", name);

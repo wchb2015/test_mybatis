@@ -7,6 +7,7 @@
 
     <typeAliases>
         <typeAlias type="com.lvmama.model.User" alias="user"/>
+        <typeAlias type="com.lvmama.model.AttDetail" alias="attDetail"/>
     </typeAliases>
 
     <!-- 和spring整合后 environments配置将废除-->
@@ -28,7 +29,7 @@
     <mappers>
         <mapper resource="sqlmap/User.xml"/>
         <mapper resource="mappers/UserMapper.xml"/>
-        <mapper  ></mapper>
+        <mapper resource="mappers/AttDetailMapper.xml"/>
     </mappers>
 
 </configuration>
