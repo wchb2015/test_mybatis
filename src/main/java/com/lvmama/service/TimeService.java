@@ -2,13 +2,10 @@ package com.lvmama.service;
 
 
 import com.lvmama.dao.AttDetailMapper;
-import com.lvmama.dao.UserMapper;
 import com.lvmama.model.AttDetail;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.ibatis.io.Resources;
@@ -137,7 +134,6 @@ public class TimeService {
                 Date endTime = dateMap.get(key).get(dates.size() - 1);
                 detail.setStartTime(startTime);
                 detail.setEndTime(endTime);
-                detail.setMonth(1601);
                 detail.setCreateTime(createTime);
                 detail.setMinute((endTime.getTime() - startTime.getTime()) / (1000 * 60));
                 result.add(detail);

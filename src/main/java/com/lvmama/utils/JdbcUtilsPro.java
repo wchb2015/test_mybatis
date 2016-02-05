@@ -11,14 +11,14 @@ import java.sql.SQLException;
  */
 public class JdbcUtilsPro {
     private static DataSource dataSource = new ComboPooledDataSource();
-    private static ThreadLocal<Connection> tl = new ThreadLocal<Connection>();//[tl其实是一个Map，每个线程都可以来保存自己的Connection]
+    private static ThreadLocal<Connection> tl = new ThreadLocal<Connection>();//tl其实是一个Map，每个线程都可以来保存自己的Connection
 
     public static DataSource getDataSource() {
         return dataSource;
     }
 
     public static Connection getConnection() throws SQLException {
-        Connection con = tl.get();//[获取当前线程的连接]
+        Connection con = tl.get();//获取当前线程的连接
         if (con == null) {
             return dataSource.getConnection();
         }
