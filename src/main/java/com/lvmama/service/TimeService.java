@@ -6,6 +6,7 @@ import com.lvmama.model.AttDetail;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.ibatis.io.Resources;
@@ -38,6 +39,8 @@ public class TimeService {
 
     private AttDetailMapper attDetailMapper;
 
+    private String EmployeeNo = "JYWH-SH1503-04159";
+
     @Before
     public void setUp() throws Exception {
 
@@ -64,7 +67,7 @@ public class TimeService {
 
         long startTime = System.currentTimeMillis();
 
-        List<File> files = getExcelFileList("/home/wangchongbei/下载/work_t");
+        List<File> files = getExcelFileList("/home/wchb7/Downloads/work_t");
 
         List<AttDetail> result = transferToList(files);
 
@@ -98,8 +101,26 @@ public class TimeService {
                     for (int i = 1; i <= lastRowNum; i++) {
 
                         XSSFRow row = sheet.getRow(i);
-                        if (row.getCell(1) != null && row.getCell(1).getCellType() == 1 && "王重倍".equals(row.getCell(1).getStringCellValue())) {
+                        /*if (row.getCell(1) != null && row.getCell(1).getCellType() == 1 && "王重倍".equals(row.getCell(1).getStringCellValue())) {
                             Date tempDate = row.getCell(5).getDateCellValue();
+
+                            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                            String ds = sdf.format(tempDate);
+
+                            if (!dateMap.keySet().contains(ds)) {
+                                List<Date> dateList = new ArrayList<Date>();
+                                dateList.add(tempDate);
+                                dateMap.put(ds, dateList);
+                            } else {
+                                List tempList = dateMap.get(ds);
+                                if (!tempList.contains(tempDate)) {
+                                    tempList.add(tempDate);
+                                }
+                            }
+                        }*/
+
+                        if (row != null && row.getCell(1) != null && EmployeeNo.equals(row.getCell(1).getStringCellValue())) {
+                            Date tempDate = row.getCell(0).getDateCellValue();
 
                             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                             String ds = sdf.format(tempDate);
@@ -134,6 +155,7 @@ public class TimeService {
                 Date endTime = dateMap.get(key).get(dates.size() - 1);
                 detail.setStartTime(startTime);
                 detail.setEndTime(endTime);
+                detail.setMonth(1604);
                 detail.setCreateTime(createTime);
                 detail.setMinute((endTime.getTime() - startTime.getTime()) / (1000 * 60));
                 result.add(detail);
