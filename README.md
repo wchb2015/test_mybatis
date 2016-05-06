@@ -1,8 +1,4 @@
-#test_mybatis
-###mybatis开发Dao有两种方式:
-1. 原始的dao开发方法(程序需要开发dao interface 和dao impl)
-2. mybatis的mapper接口(相当于dao接口)代理开发方法
-
+### mybatis的学习例子.
 
 ```sql
 CREATE TABLE `att_detail` (
@@ -30,3 +26,6 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 ```
+
+1. 原始的dao开发方法(程序需要开发dao interface 和dao impl)
+2. mybatis的mapper接口(相当于dao接口)代理开发方法
