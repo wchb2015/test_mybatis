@@ -3,9 +3,6 @@ package com.lvmama.utils;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by wangchongbei on 15-12-29.
- */
 public class DateUtils {
 
     public static Date getDateAfter2359Date(Date date, int duration) {

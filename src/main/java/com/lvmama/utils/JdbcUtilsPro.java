@@ -6,9 +6,6 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/**
- * Created by wangchongbei on 16-1-12.
- */
 public class JdbcUtilsPro {
     private static DataSource dataSource = new ComboPooledDataSource();
     private static ThreadLocal<Connection> tl = new ThreadLocal<Connection>();//tl其实是一个Map，每个线程都可以来保存自己的Connection

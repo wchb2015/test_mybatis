@@ -6,9 +6,6 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/**
- * Created by wangchongbei on 16-1-12.
- */
 public class JdbcUtils {
 
     private static DataSource dataSource = new ComboPooledDataSource();

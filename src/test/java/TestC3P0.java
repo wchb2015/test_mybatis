@@ -1,11 +1,7 @@
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.junit.*;
 
 import java.sql.Connection;
 
-/**
- * Created by wangchongbei on 16-1-12.
- */
 public class TestC3P0 {
 
     @org.junit.Test

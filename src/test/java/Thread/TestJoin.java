@@ -1,11 +1,5 @@
 package Thread;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-/**
- * Created by wangchongbei on 15-12-30.
- */
 public class TestJoin {
 
     public static void main(String[] args) throws InterruptedException {

@@ -1,9 +1,5 @@
 package Thread;
 
-/**
- * Created by wangchongbei on 15-12-29.
- */
-
 import java.util.ArrayList;
 import java.util.List;
 

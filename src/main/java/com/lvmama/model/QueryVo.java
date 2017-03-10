@@ -2,9 +2,6 @@ package com.lvmama.model;
 
 import java.util.List;
 
-/**
- * Created by wangchongbei on 15-12-30.
- */
 public class QueryVo {
 
     private List<Integer> ids;//传入多个id

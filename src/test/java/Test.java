@@ -5,9 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by wangchongbei on 15-12-29.
- */
 public class Test {
 
     @org.junit.Test

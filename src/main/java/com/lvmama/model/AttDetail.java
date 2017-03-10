@@ -3,7 +3,6 @@ package com.lvmama.model;
 import java.io.Serializable;
 import java.util.Date;
 
-
 public class AttDetail implements Serializable {
     private static final long serialVersionUID = 8671770986067328177L;
 

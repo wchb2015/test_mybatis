@@ -1,6 +1,4 @@
-package Thread; /**
- * Created by wangchongbei on 15-12-29.
- */
+package Thread;
 // http://www.iteye.com/topic/806990
 // http://www.iteye.com/topic/808550
 
@@ -42,7 +40,7 @@ public class Account {
         System.out.println(account.getBalance());
     }
 
-    static   class  AddThread implements Runnable {
+    static class AddThread implements Runnable {
         Account account;
         int amount;
 

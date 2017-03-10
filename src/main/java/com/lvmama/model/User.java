@@ -2,9 +2,6 @@ package com.lvmama.model;
 
 import java.util.Date;
 
-/**
- * Created by wangchongbei on 15-12-28.
- */
 public class User {
 
     //属性名和数据库表的字段对应

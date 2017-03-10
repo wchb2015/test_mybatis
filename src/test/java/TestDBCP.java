@@ -1,14 +1,8 @@
-
 import org.apache.commons.dbcp.BasicDataSource;
-import org.junit.*;
 
 import java.sql.Connection;
 
-/**
- * Created by wangchongbei on 16-1-12.
- */
 public class TestDBCP {
-
 
     @org.junit.Test
     public void testConnection() throws Exception {

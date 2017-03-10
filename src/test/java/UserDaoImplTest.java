@@ -13,9 +13,6 @@ import java.io.InputStream;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by wangchongbei on 15-12-28.
- */
 public class UserDaoImplTest {
 
     private static final Log LOG = LogFactory.getLog(UserDaoImplTest.class);

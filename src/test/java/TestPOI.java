@@ -7,16 +7,12 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.junit.*;
 import org.junit.Test;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/**
- * Created by wangchongbei on 16-1-6.
- */
 public class TestPOI {
     @org.junit.Test
     public void fileTest() {

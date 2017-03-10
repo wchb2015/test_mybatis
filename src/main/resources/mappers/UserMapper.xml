@@ -56,7 +56,6 @@
 
     </resultMap>
 
-
     <!-- 用户信息综合查询
 	#{userCustom.sex}:取出pojo包装对象中性别值
 	${userCustom.username}：取出pojo包装对象中用户名称

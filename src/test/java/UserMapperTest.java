@@ -5,7 +5,8 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.junit.*;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.InputStream;
@@ -13,9 +14,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by wangchongbei on 15-12-30.
- */
 public class UserMapperTest {
 
     private SqlSessionFactory sqlSessionFactory;
