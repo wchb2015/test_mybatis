@@ -6,8 +6,6 @@ import com.lvmama.model.AttDetail;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -18,6 +16,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,7 +30,7 @@ import java.util.*;
 
 public class TimeService {
 
-    private static final Log LOG = LogFactory.getLog(TimeService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TimeService.class);
     private SqlSessionFactory sqlSessionFactory;
 
     private SqlSession sqlSession;

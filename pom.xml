@@ -3,31 +3,43 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <!-- The Basics -->
     <groupId>test</groupId>
     <artifactId>mybatis</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>test_mybatis</name>
 
+    <properties>
+
+    </properties>
+
     <dependencies>
-        <!--common start-->
+        <!--log start-->
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>18.0</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
         </dependency>
 
         <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>1.2</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
         </dependency>
 
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
+        </dependency>
+        <!--log end -->
+
+        <!--common start-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
         </dependency>
 
         <dependency>
@@ -104,12 +116,17 @@
     <!-- Build Settings -->
     <!--http://maven.apache.org/pom.html#Build_Settings-->
     <build>
-        <finalName>${artifactId}-${version}</finalName>
+        <finalName>test_mybatis</finalName>
         <resources>
             <resource>
                 <!--directory: 资源所在的位置-->
                 <directory>src/main/resources</directory>
                 <!--filtering: 是否替换资源中的属性placehold-->
+                <filtering>true</filtering>
+            </resource>
+
+            <resource>
+                <directory>src/main/conf/dev</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
