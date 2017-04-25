@@ -2,6 +2,20 @@
 
 ```sql
 CREATE TABLE `att_detail` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL DEFAULT 'wchb',
+  `att_date` int(10) NOT NULL DEFAULT 0,
+  `month` int(10) NOT NULL DEFAULT 0,
+  `start_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `end_time`   timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `minute` int(10) NOT NULL DEFAULT 0,
+  `create_time`   timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_time`   timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `ux_att_date` (`att_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `att_detail` (
   `id` bigint(20) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
   `start_time` datetime default NULL,
