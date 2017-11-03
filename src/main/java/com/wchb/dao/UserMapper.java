@@ -5,9 +5,6 @@ import com.wchb.model.QueryVo;
 
 import java.util.List;
 
-/**
- * Created by wangchongbei on 15-12-29.
- */
 public interface UserMapper {
 
     User findUserById(int id);
