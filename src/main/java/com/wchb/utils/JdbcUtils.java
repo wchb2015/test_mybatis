@@ -1,4 +1,4 @@
-package com.lvmama.utils;
+package com.wchb.utils;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 

@@ -8,6 +8,7 @@
     <groupId>test</groupId>
     <artifactId>mybatis</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>test_mybatis</name>
 
     <properties>
@@ -16,24 +17,14 @@
 
     <dependencies>
         <!--log start-->
+        <!--https://wiki.base22.com/display/btg/How+to+setup+SLF4J+and+LOGBack+in+a+web+app+-+fast-->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+            <!--含了logback-classic-1.2.3.jar,logback-core-1.2.3.jar,slf4j-api-1.7.25.jar-->
         </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.25</version>
-        </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-        <!--log end -->
+        <!--log end-->
 
         <!--common start-->
         <dependency>
@@ -97,6 +88,13 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>3.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

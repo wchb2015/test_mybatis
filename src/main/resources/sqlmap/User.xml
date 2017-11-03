@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper       PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace命名空间，作用就是对sql进行分类化管理，理解sql隔离注意：使用mapper代理方法开发，namespace有特殊重要的作用-->
-<mapper namespace="test">
+<mapper namespace="com.wchb.dao.UserDao">
 
     <!-- 在 映射文件中配置很多sql语句 -->
     <!-- 需求：通过id查询用户表的记录 -->
@@ -14,7 +14,7 @@
 
     resultType：指定sql输出结果 的所映射的java对象类型，select指定resultType表示将单条记录映射成的java对象。
      -->
-    <select id="findUserById" parameterType="int" resultType="com.lvmama.model.User">
+    <select id="findUserById" parameterType="int" resultType="com.wchb.model.User">
         SELECT * FROM user WHERE id=#{value}
     </select>
 
@@ -24,7 +24,7 @@
     使用${}拼接sql，引起 sql注入
     ${value}：接收输入 参数的内容，如果传入类型是简单类型，${}中只能使用value
      -->
-    <select id="findUserByName" parameterType="java.lang.String" resultType="com.lvmama.model.User">
+    <select id="findUserByName" parameterType="java.lang.String" resultType="com.wchb.model.User">
         SELECT * FROM user WHERE username LIKE '%${value}%'
     </select>
 
@@ -32,7 +32,7 @@
     parameterType：指定输入 参数类型是pojo（包括 用户信息）
     #{}中指定pojo的属性名，接收到pojo对象的属性值，mybatis通过OGNL获取对象的属性值
     -->
-    <insert id="insertUser" parameterType="com.lvmama.model.User">
+    <insert id="insertUser" parameterType="com.wchb.model.User">
         <!--
         将插入数据的主键返回，返回到user对象中
 
@@ -74,7 +74,7 @@
     parameterType指定user对象，包括 id和更新信息，注意：id必须存在
     #{id}：从输入 user对象中获取id属性值
      -->
-    <update id="updateUser" parameterType="com.lvmama.model.User">
+    <update id="updateUser" parameterType="com.wchb.model.User">
         update user set username=#{username},birthday=#{birthday},sex=#{sex},address=#{address}
         where id=#{id}
     </update>

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- namespace命名空间，作用就是对sql进行分类化管理，理解sql隔离
 注意：使用mapper代理方法开发，namespace有特殊重要的作用，namespace等于mapper接口地址-->
-<mapper namespace="com.lvmama.dao.UserMapper">
+<mapper namespace="com.wchb.dao.UserMapper">
 
     <!-- 定义sql片段
 	id：sql片段的唯 一标识
@@ -60,7 +60,7 @@
 	#{userCustom.sex}:取出pojo包装对象中性别值
 	${userCustom.username}：取出pojo包装对象中用户名称
 	 -->
-    <select id="findUserList" parameterType="com.lvmama.model.QueryVo" resultType="user">
+    <select id="findUserList" parameterType="com.wchb.model.QueryVo" resultType="user">
         SELECT * FROM user
         <!--
         where可以自动去掉条件中的第一个and
@@ -81,7 +81,7 @@
 	parameterType：指定输入类型和findUserList一样
 	resultType：输出结果类型
 	 -->
-    <select id="findUserCount" parameterType="com.lvmama.model.QueryVo" resultType="int">
+    <select id="findUserCount" parameterType="com.wchb.model.QueryVo" resultType="int">
         SELECT count(*) FROM user
         <!--
       where可以自动去掉条件中的第一个and

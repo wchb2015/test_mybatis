@@ -1,15 +1,13 @@
-package com.lvmama.dao.impl;
+package com.wchb.dao.impl;
 
-import com.lvmama.dao.UserDao;
-import com.lvmama.model.User;
+import com.wchb.dao.UserDao;
+import com.wchb.model.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 
-/**
- * Created by wangchongbei on 15-12-28.
- */
+
 public class UserDaoImpl implements UserDao {
 
     private SqlSessionFactory sqlSessionFactory;

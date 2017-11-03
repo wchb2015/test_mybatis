@@ -6,9 +6,8 @@
     <properties resource="jdbc.properties"/>
 
     <typeAliases>
-        <typeAlias type="com.lvmama.model.User" alias="user"/>
-        <typeAlias type="com.lvmama.model.AttDetail" alias="attDetail"/>
-    </typeAliases>
+        <typeAlias type="com.wchb.model.User" alias="user"/>
+     </typeAliases>
 
     <!-- 和spring整合后 environments配置将废除-->
     <environments default="development">
@@ -28,7 +27,6 @@
     <mappers>
         <mapper resource="sqlmap/User.xml"/>
         <mapper resource="mappers/UserMapper.xml"/>
-        <mapper resource="mappers/AttDetailMapper.xml"/>
-    </mappers>
+     </mappers>
 
 </configuration>

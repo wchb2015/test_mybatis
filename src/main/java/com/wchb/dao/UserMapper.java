@@ -1,7 +1,7 @@
-package com.lvmama.dao;
+package com.wchb.dao;
 
-import com.lvmama.model.User;
-import com.lvmama.model.QueryVo;
+import com.wchb.model.User;
+import com.wchb.model.QueryVo;
 
 import java.util.List;
 

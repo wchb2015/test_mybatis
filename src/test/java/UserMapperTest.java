@@ -1,6 +1,6 @@
-import com.lvmama.dao.UserMapper;
-import com.lvmama.model.QueryVo;
-import com.lvmama.model.User;
+import com.wchb.dao.UserMapper;
+import com.wchb.model.QueryVo;
+import com.wchb.model.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

@@ -1,13 +1,13 @@
-import com.lvmama.dao.UserDao;
-import com.lvmama.dao.impl.UserDaoImpl;
-import com.lvmama.model.User;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import com.wchb.dao.UserDao;
+import com.wchb.dao.impl.UserDaoImpl;
+import com.wchb.model.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.util.Date;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class UserDaoImplTest {
 
-    private static final Log LOG = LogFactory.getLog(UserDaoImplTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(UserDaoImplTest.class);
 
     private SqlSessionFactory sqlSessionFactory;
 
@@ -40,8 +40,7 @@ public class UserDaoImplTest {
 
         User user = userDao.findUserById(16);
 
-        LOG.info(user);
-    }
+     }
 
     @Test
     public void testFindUserByName() throws Exception {
@@ -49,8 +48,7 @@ public class UserDaoImplTest {
         List<User> userList = userDao.findUserByName("王");
 
         LOG.info("Size------" + userList.size());
-        LOG.info(userList);
-    }
+     }
 
     @Test
     public void testInsertUser() throws Exception {

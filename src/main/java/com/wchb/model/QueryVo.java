@@ -1,4 +1,4 @@
-package com.lvmama.model;
+package com.wchb.model;
 
 import java.util.List;
 

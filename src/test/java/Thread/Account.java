@@ -2,15 +2,15 @@ package Thread;
 // http://www.iteye.com/topic/806990
 // http://www.iteye.com/topic/808550
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 测试多线程
  */
 public class Account {
 
-    public final Log LOG = LogFactory.getLog(this.getClass());
+    public final Logger LOG = LoggerFactory.getLogger(Account.class);
     private int balance;
 
     public Account(int balance) {

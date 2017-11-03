@@ -1,6 +1,6 @@
-package com.lvmama.dao;
+package com.wchb.dao;
 
-import com.lvmama.model.User;
+import com.wchb.model.User;
 
 import java.util.List;
 
