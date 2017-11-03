@@ -1,16 +1,13 @@
 package com.wchb.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Date;
 
 @Getter
 @Setter
-@Builder
 @ToString
+@NoArgsConstructor
 public class User {
 
     //属性名和数据库表的字段对应

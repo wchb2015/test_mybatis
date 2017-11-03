@@ -15,7 +15,7 @@ import java.util.List;
 
 public class UserDaoImplTest {
 
-    private static final Logger LOG = LoggerFactory.getLogger(UserDaoImplTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserDaoImplTest.class);
 
     private SqlSessionFactory sqlSessionFactory;
 
@@ -40,14 +40,14 @@ public class UserDaoImplTest {
 
         User user = userDao.findUserById(16);
 
-     }
+        logger.info("user:{}", user);
+    }
 
     @Test
     public void testFindUserByName() throws Exception {
 
         List<User> userList = userDao.findUserByName("王");
 
-        LOG.info("Size------" + userList.size());
      }
 
     @Test
@@ -59,14 +59,12 @@ public class UserDaoImplTest {
         user.setUsername("Tom1");
         user.setSex("M");
 
-        LOG.info("result----" + userDao.insertUser(user));
 
     }
 
     @Test
     public void testDeleteUser() throws Exception {
 
-        LOG.info("result----" + userDao.deleteUser(29));
 
     }
 
@@ -79,8 +77,6 @@ public class UserDaoImplTest {
         user.setUsername("Frank");
         user.setSex("M");
         user.setId(42);
-
-        LOG.info("result----" + userDao.updateUser(user));
 
     }
 }

@@ -8,6 +8,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -15,6 +17,8 @@ import java.util.Date;
 import java.util.List;
 
 public class UserMapperTest {
+
+    private static final Logger logger = LoggerFactory.getLogger(UserMapperTest.class);
 
     private SqlSessionFactory sqlSessionFactory;
 
@@ -49,8 +53,7 @@ public class UserMapperTest {
 
         User user = userMapper.findUserById(16);
 
-        System.out.println(user);
-
+        logger.info("user:{}", user);
     }
 
     @Test

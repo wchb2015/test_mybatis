@@ -1,7 +1,7 @@
 ####  mybatis的学习Demo.
 
 ```sql
-CREATE TABLE `test_user` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(32) NOT NULL,
   `birthday` date DEFAULT NULL,

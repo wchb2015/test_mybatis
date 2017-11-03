@@ -20,7 +20,7 @@ public class UserDaoImpl implements UserDao {
     public int insertUser(User user) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
-        int result = sqlSession.insert("test.insertUser", user);
+        int result = sqlSession.insert("com.wchb.dao.UserDao.insertUser", user);
 
         sqlSession.commit();
 
@@ -33,7 +33,7 @@ public class UserDaoImpl implements UserDao {
     public int deleteUser(int id) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
-        int result = sqlSession.delete("test.deleteUser", id);
+        int result = sqlSession.delete("com.wchb.dao.UserDao.deleteUser", id);
 
         sqlSession.commit();
 
@@ -46,7 +46,7 @@ public class UserDaoImpl implements UserDao {
     public int updateUser(User user) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
-        int result = sqlSession.update("test.updateUser", user);
+        int result = sqlSession.update("com.wchb.dao.UserDao.updateUser", user);
 
         sqlSession.commit();
 
@@ -58,7 +58,7 @@ public class UserDaoImpl implements UserDao {
     public User findUserById(int id) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
-        User user = sqlSession.selectOne("test.findUserById", id);
+        User user = sqlSession.selectOne("com.wchb.dao.UserDao.findUserById", id);
 
         sqlSession.close();
 
@@ -69,7 +69,7 @@ public class UserDaoImpl implements UserDao {
     public List<User> findUserByName(String name) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
-        List<User> list = sqlSession.selectList("test.findUserByName", name);
+        List<User> list = sqlSession.selectList("com.wchb.dao.UserDao.findUserByName", name);
 
         sqlSession.close();
 
