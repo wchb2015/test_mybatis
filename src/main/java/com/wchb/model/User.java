@@ -8,6 +8,8 @@ import java.util.Date;
 @Setter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
 
     //属性名和数据库表的字段对应

@@ -46,9 +46,9 @@ public class UserMapperTest {
     @org.junit.Test
     public void testFindUserById() throws Exception {
 
-        User user = userMapper.findUserById(16);
+        User user = userMapper.findUserById(16L);
 
         logger.info("user:{}", user);
     }
-    
+
 }

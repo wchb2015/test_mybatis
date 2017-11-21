@@ -9,7 +9,7 @@ public class TestDBCP {
         BasicDataSource ds = new BasicDataSource();
         ds.setUsername("root");
         ds.setPassword("111111");
-        ds.setUrl("jdbc:mysql://localhost:3306/mysql_test");
+        ds.setUrl("jdbc:mysql://127.0.0.1:32769/test_mysql");
         ds.setDriverClassName("com.mysql.jdbc.Driver");
 
         ds.setMaxActive(20);

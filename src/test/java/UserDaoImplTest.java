@@ -38,7 +38,7 @@ public class UserDaoImplTest {
     @Test
     public void testFindUserById() throws Exception {
 
-        User user = userDao.findUserById(16);
+        User user = userDao.findUserById(16L);
 
         logger.info("user:{}", user);
     }
@@ -48,18 +48,17 @@ public class UserDaoImplTest {
 
         List<User> userList = userDao.findUserByName("王");
 
-     }
+    }
 
     @Test
     public void testInsertUser() throws Exception {
-
-        User user = new User();
-        user.setAddress("LA");
-        user.setBirthday(new Date());
-        user.setUsername("Tom1");
-        user.setSex("M");
-
-
+        User user = User.builder()
+                .address("AAAAA")
+                .birthday(new Date())
+                .sex("M")
+                .username("NameJSON")
+                .build();
+        userDao.insertUser(user);
     }
 
     @Test

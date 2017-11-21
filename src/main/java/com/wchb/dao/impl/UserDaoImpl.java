@@ -7,7 +7,6 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import java.util.List;
 
-
 public class UserDaoImpl implements UserDao {
 
     private SqlSessionFactory sqlSessionFactory;
@@ -15,7 +14,6 @@ public class UserDaoImpl implements UserDao {
     public UserDaoImpl(SqlSessionFactory sqlSessionFactory) {
         this.sqlSessionFactory = sqlSessionFactory;
     }
-
 
     public int insertUser(User user) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
@@ -30,7 +28,7 @@ public class UserDaoImpl implements UserDao {
 
     }
 
-    public int deleteUser(int id) {
+    public int deleteUser(Long id) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         int result = sqlSession.delete("com.wchb.dao.UserDao.deleteUser", id);
@@ -55,7 +53,7 @@ public class UserDaoImpl implements UserDao {
         return result;
     }
 
-    public User findUserById(int id) {
+    public User findUserById(Long id) {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         User user = sqlSession.selectOne("com.wchb.dao.UserDao.findUserById", id);
@@ -63,7 +61,6 @@ public class UserDaoImpl implements UserDao {
         sqlSession.close();
 
         return user;
-
     }
 
     public List<User> findUserByName(String name) {
@@ -75,7 +72,5 @@ public class UserDaoImpl implements UserDao {
 
         return list;
     }
-
-
 }
 

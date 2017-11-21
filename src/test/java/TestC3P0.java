@@ -1,3 +1,4 @@
+import com.alibaba.fastjson.JSON;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 import java.sql.Connection;
@@ -8,7 +9,7 @@ public class TestC3P0 {
     public void testConnection() throws Exception {
 
         ComboPooledDataSource ds = new ComboPooledDataSource();
-        ds.setJdbcUrl("jdbc:mysql://localhost:3306/mysql_test");
+        ds.setJdbcUrl("jdbc:mysql://127.0.0.1:32769/test_mysql");
         ds.setUser("root");
         ds.setPassword("111111");
         ds.setDriverClass("com.mysql.jdbc.Driver");
@@ -19,7 +20,7 @@ public class TestC3P0 {
         ds.setMaxPoolSize(50);
 
         Connection con = ds.getConnection();
-        System.out.println(con);
+        System.out.println(ds.getJdbcUrl());
         con.close();
     }
 }
