@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -53,10 +54,10 @@ public class UserDaoImplTest {
     @Test
     public void testInsertUser() throws Exception {
         User user = User.builder()
-                .address("AAAAA")
-                .birthday(new Date())
-                .sex("M")
-                .username("NameJSON")
+                .name("AAAAA")
+                .mobile("111111")
+                .idNumber("22222")
+                .createdAt(new Timestamp(System.currentTimeMillis()))
                 .build();
         userDao.insertUser(user);
     }
@@ -71,10 +72,6 @@ public class UserDaoImplTest {
     public void testUpdateUser() throws Exception {
 
         User user = new User();
-        user.setAddress("LA");
-        user.setBirthday(new Date());
-        user.setUsername("Frank");
-        user.setSex("M");
         user.setId(42);
 
     }
